@@ -5,7 +5,7 @@ import coins from '../assets/coin.svg'
 const ProductCard = ({product}) => {
   return (
     <li className={styles.cardContainer}>
-      <Link to={`/${product._id}`}>
+      <Link to={`/Aerolab-SPA-react/product/${product._id}`}>
         <img src={product.img?.url} alt={product.name} />
         <p className={styles.category}>{product.category}</p>
         <p className={styles.name}>{product.name}</p>

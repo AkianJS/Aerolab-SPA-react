@@ -8,12 +8,15 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Header />
       <BrowserRouter>
+        <Navbar />
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/:id" element={<ProductDetails />} />
+          <Route path="/Aerolab-SPA-react/" element={<Home />} />
+          <Route
+            path="/Aerolab-SPA-react/product/:id"
+            element={<ProductDetails />}
+          />
         </Routes>
       </BrowserRouter>
     </div>

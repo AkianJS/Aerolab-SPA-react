@@ -1,17 +1,24 @@
-import coin from '../assets/coin.svg'
-import logo from '../../assets/aerolab-logo.svg'
+import { Link } from "react-router-dom";
+import coin from "../assets/coin.svg";
+import logo from "../../assets/aerolab-logo.svg";
 
-import styles from '../styles/Navbar.module.css'
+import styles from "../styles/Navbar.module.css";
 
 const Navbar = () => {
   return (
     <nav className={styles.navContainer}>
       <ul className={styles.items}>
-        <li className={styles.logo}><img src={logo} alt="logo" /></li>
-        <li className={styles.user}><p>AkianJS</p></li>
+          <li className={styles.logo}>
+        <Link to={`/Aerolab-SPA-react/`}>
+            <img src={logo} alt="logo" />
+        </Link>
+          </li>
+        <li className={styles.user}>
+          <p>AkianJS</p>
+        </li>
         <li className={styles.coins}>
-        <p>6000</p>
-        <img src={coin} alt="coin" />
+          <p>6000</p>
+          <img src={coin} alt="coin" />
         </li>
       </ul>
     </nav>
