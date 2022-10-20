@@ -9,9 +9,10 @@ const Navbar = () => {
     <nav className={styles.navContainer}>
       <ul className={styles.items}>
           <li className={styles.logo}>
-        <Link to={`/Aerolab-SPA-react/`}>
+        <a href="/Aerolab-SPA-react/">
             <img src={logo} alt="logo" />
-        </Link>
+        </a>
+        
           </li>
         <li className={styles.user}>
           <p>AkianJS</p>
