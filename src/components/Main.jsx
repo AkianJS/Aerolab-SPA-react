@@ -50,7 +50,7 @@ const Main = () => {
   return (
     <main>
       <header className={styles.header}>
-        <p>16 of 32 products</p>
+        <p>32 of 32 products</p>
         <p>Sort by:</p>
         <button className={!isLowest && !isHighest? styles.active : null}
         onClick={handleSortNewest}>

@@ -4,22 +4,28 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetails from "./pages/ProductDetails";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
+import UserContext from "./context/UserContext";
+import userState from "./hooks/userState";
 
 function App() {
+  const userInitialState = userState();
+
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Navbar />
-        <Header />
-        <Routes>
-          <Route path="/Aerolab-SPA-react/" element={<Home />} />
-          <Route
-            path="/Aerolab-SPA-react/product/:id"
-            element={<ProductDetails />}
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <UserContext.Provider value={userInitialState}>
+      <div className="App">
+        <BrowserRouter>
+          <Navbar />
+          <Header />
+          <Routes>
+            <Route path="/Aerolab-SPA-react/" element={<Home />} />
+            <Route
+              path="/Aerolab-SPA-react/product/:id"
+              element={<ProductDetails />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </UserContext.Provider>
   );
 }
 
