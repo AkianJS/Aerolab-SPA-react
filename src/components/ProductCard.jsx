@@ -12,13 +12,13 @@ const ProductCard = ({ product }) => {
   const handleBuyItem = () => {
     if (userInfo.points < product.cost) return
 
-    setUserPoints(1000)
+    setUserPoints(1000, product.cost)
     addItemToHistory(product._id)
   }
 
   return (
     <li className={styles.cardContainer}>
-      <Link to={`/Aerolab-SPA-react/product/${product._id}`}>
+      <Link to={`/product/${product._id}`}>
         <img src={product.img?.url} alt={product.name} />
         <p className={styles.category}>{product.category}</p>
         <p className={styles.name}>{product.name}</p>

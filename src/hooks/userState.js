@@ -19,12 +19,16 @@ const userState = () => {
         redeem: data.redeemHistory,
       });
     });
-  }, [userInfo])
+  }, [])
   
 
 
-  const setUserPoints = (payload) => {
+  const setUserPoints = (payload, cost) => {
     updatePoints(payload).then((data) => console.log(data));
+    setUserInfo({
+      ...userInfo,
+      points: (userInfo.points + (payload - cost))
+    })
   };
 
   const setReedemItem = (payload) => {

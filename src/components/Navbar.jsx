@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className={styles.navContainer}>
       <ul className={styles.items}>
         <li className={styles.logo}>
-          <a href="/Aerolab-SPA-react/">
+          <a href="/">
             <img src={logo} alt="logo" />
           </a>
         </li>

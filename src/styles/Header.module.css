@@ -1,6 +1,7 @@
 .headerContainer
 {
     position: relative;
+    top: 4rem;
     width: 100vw;
     height: 40vh;
     min-height: 10rem;

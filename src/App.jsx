@@ -17,9 +17,9 @@ function App() {
           <Navbar />
           <Header />
           <Routes>
-            <Route path="/Aerolab-SPA-react/" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route
-              path="/Aerolab-SPA-react/product/:id"
+              path="/product/:id"
               element={<ProductDetails />}
             />
           </Routes>

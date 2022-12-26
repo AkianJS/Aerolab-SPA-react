@@ -25,7 +25,7 @@ export const updatePoints = (amount) => {
   const postUserUrl = "https://coding-challenge-api.aerolab.co/user/points";
   return fetch(postUserUrl, {
     method: "POST",
-    body: JSON.stringify({ amount: amount }),
+    body: JSON.stringify({ "amount": amount }),
     headers: HEADERS,
   });
 };
