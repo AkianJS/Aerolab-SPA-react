@@ -48,16 +48,16 @@ const Main = () => {
   };
   
   return (
-    <main>
+    <main className={styles.container}>
       <header className={styles.header}>
-        <p>32 of 32 products</p>
+        <p>{data.length} of {data.length}</p>
         <p>Sort by:</p>
         <button className={!isLowest && !isHighest? styles.active : null}
         onClick={handleSortNewest}>
           Most recent
         </button>
         <button onClick={handleSortLowest}
-        className={isLowest? styles.active : null}>Lower price</button>
+        className={isLowest? styles.active : null}>Lowest price</button>
         <button onClick={handleSortHighest} className={isHighest ? styles.active : null}>Highest price</button>
       </header>
 
